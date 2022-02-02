@@ -153,7 +153,9 @@ let filterByNameInput = (student) => {
 
 //students.filter(filterByNameInput).filter(filterByGradeRange);
 
-let filterByGradeAndNameInput = students.filter(filterByNameInput).filter(filterByGradeRange); // does not work when passed as argument in HTNL onclick
+let filterByGradeAndNameInput = () => {
+    loadTable(students.filter(filterByNameInput).filter(filterByGradeRange));
+};
 
 let ascendingFirstName = () => {
     studentsSpread.sort(function (a, b) {

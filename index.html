@@ -15,7 +15,7 @@
             <input type="text" size="3" class="GradeFilter" id="minGradeInput" maxlength="3" placeholder="e.g. 52" />Max Grade
             <input type="text" size="3" class="GradeFilter" id="maxGradeInput" maxlength="3" placeholder="e.g. 76" />
         </div>
-        <div class="btns">
+        <div class="btns" id="testBtn">
             <button type="button" class="apply" onclick="loadTable(students.filter(filterByNameInput).filter(filterByGradeRange))">Apply Filter</button>
             <button type="button" class="clear" id="clear" onclick="loadTable(students); clearTextFields()">Clear Filter</button>
         </div>

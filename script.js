@@ -173,17 +173,6 @@ let descendingFirstName = () => {
     });
 };
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [...arr1];
-arr2[0] = 6;
-console.log(arr1);
-console.log(arr2);
-const people = { name: "Tim", age: 37 };
-const people2 = { ...people };
-console.log(people);
-people2.name = "Gael";
-console.log(people2);
-
 function firstNameClickHandler() {
     switch (firstNameClickCount % 3) {
         case 0:

@@ -49,6 +49,8 @@ const students = [
     }
 ];
 
+const studentsSpread = [...students];
+
 const mapEmojis = [
     // map emojis
     { emotion: ":)", ref: "😊" },
@@ -154,7 +156,7 @@ let filterByNameInput = (student) => {
 let filterByGradeAndNameInput = students.filter(filterByNameInput).filter(filterByGradeRange); // does not work when passed as argument in HTNL onclick
 
 let ascendingFirstName = () => {
-    students.sort(function (a, b) {
+    studentsSpread.sort(function (a, b) {
         let firstNameA = a.name.split(" ")[0].toLowerCase();
         let firstNameB = b.name.split(" ")[0].toLowerCase();
         if (firstNameA < firstNameB) return -1;
@@ -164,7 +166,7 @@ let ascendingFirstName = () => {
 };
 
 let descendingFirstName = () => {
-    students.sort(function (a, b) {
+    studentsSpread.sort(function (a, b) {
         let firstNameA = a.name.split(" ")[0].toLowerCase();
         let firstNameB = b.name.split(" ")[0].toLowerCase();
         if (firstNameA < firstNameB) return 1;
@@ -177,11 +179,11 @@ function firstNameClickHandler() {
     switch (firstNameClickCount % 3) {
         case 0:
             ascendingFirstName();
-            loadTable(students);
+            loadTable(studentsSpread);
             break;
         case 1:
             descendingFirstName();
-            loadTable(students);
+            loadTable(studentsSpread);
             break;
         case 2:
             loadTable(students);
@@ -191,7 +193,7 @@ function firstNameClickHandler() {
 }
 
 let ascendingLastName = () => {
-    students.sort(function (a, b) {
+    studentsSpread.sort(function (a, b) {
         let lastNameA = a.name.split(" ")[1].toLowerCase();
         let lastNameB = b.name.split(" ")[1].toLowerCase();
         if (lastNameA < lastNameB) return -1;
@@ -201,7 +203,7 @@ let ascendingLastName = () => {
 };
 
 let descendingLastName = () => {
-    students.sort(function (a, b) {
+    studentsSpread.sort(function (a, b) {
         let lastNameA = a.name.split(" ")[1].toLowerCase();
         let lastNameB = b.name.split(" ")[1].toLowerCase();
         if (lastNameA < lastNameB) return 1;
@@ -214,11 +216,11 @@ function lastNameClickHandler() {
     switch (lastNameClickCount % 3) {
         case 0:
             ascendingLastName();
-            loadTable(students);
+            loadTable(studentsSpread);
             break;
         case 1:
             descendingLastName();
-            loadTable(students);
+            loadTable(studentsSpread);
             break;
         case 2:
             loadTable(students);
@@ -228,7 +230,7 @@ function lastNameClickHandler() {
 }
 // use spread operator
 let ascendingGradeScore = () => {
-    students.sort(function (a, b) {
+    studentsSpread.sort(function (a, b) {
         let gradeA = a.grade;
         let gradeB = b.grade;
         if (gradeA < gradeB) return -1;
@@ -238,7 +240,7 @@ let ascendingGradeScore = () => {
 };
 
 let descendingGradeScore = () => {
-    students.sort(function (a, b) {
+    studentsSpread.sort(function (a, b) {
         let gradeA = a.grade;
         let gradeB = b.grade;
         if (gradeA < gradeB) return 1;
@@ -251,11 +253,11 @@ function gradeClickHandler() {
     switch (gradeClickCount % 3) {
         case 0:
             ascendingGradeScore();
-            loadTable(students);
+            loadTable(studentsSpread);
             break;
         case 1:
             descendingGradeScore();
-            loadTable(students);
+            loadTable(studentsSpread);
             break;
         case 2:
             loadTable(students);

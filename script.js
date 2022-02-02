@@ -226,7 +226,7 @@ function lastNameClickHandler() {
     }
     lastNameClickCount++;
 }
-
+// use spread operator
 let ascendingGradeScore = () => {
     students.sort(function (a, b) {
         let gradeA = a.grade;

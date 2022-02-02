@@ -50,6 +50,7 @@ const students = [
 ];
 
 const mapEmojis = [
+    // map emojis
     { emotion: ":)", ref: "😊" },
     { emotion: ":(", ref: "😔" },
     { emotion: "<3", ref: "🧡" }

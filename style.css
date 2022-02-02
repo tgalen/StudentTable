@@ -1,0 +1,79 @@
+body {
+    background-color: silver;
+    font-size: 25px;
+    font-family: "Teko", sans-serif;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background: khaki;
+}
+
+tr:nth-child(even) {
+    background: lightblue;
+}
+
+.search {
+    display: inline;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.search input {
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.NameFilter {
+    max-width: 5000px;
+    margin-right: 200px;
+    box-shadow: 1px 1px gray;
+    font-size: 20px;
+}
+
+.GradeFilter {
+    max-width: 1000px;
+    box-shadow: 1px 1px gray;
+    font-size: 20px;
+    margin-left: 300px;
+}
+
+.btns {
+    padding: 15px;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1px 1px gray;
+    transition: 0.2s all;
+    padding: 15px;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+.apply {
+    background: goldenrod;
+    margin-right: 15px;
+}
+
+.clear {
+    background: slategray;
+}
+
+table {
+    width: 100%;
+}
+.table {
+    padding: 5px;
+    text-align: center;
+}

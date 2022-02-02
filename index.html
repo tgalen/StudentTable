@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student Table</title>
+        <link href="style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Orbitron&family=Teko:wght@300&display=swap" rel="stylesheet" />
+        <script src="script.js" defer></script>
+    </head>
+    <body onload="loadTable(students)">
+        <div class="search">
+            <input type="text" size="20" class="NameFilter" id="nameInput" placeholder="Student name, e.g. John" />Min Grade
+            <input type="text" size="3" class="GradeFilter" id="minGradeInput" maxlength="3" placeholder="e.g. 52" />Max Grade
+            <input type="text" size="3" class="GradeFilter" id="maxGradeInput" maxlength="3" placeholder="e.g. 76" />
+        </div>
+        <div class="btns">
+            <button type="button" class="apply" onclick="loadTable(students.filter(filterByNameInput).filter(filterByGradeRange))">Apply Filter</button>
+            <button type="button" class="clear" id="clear" onclick="loadTable(students); clearTextFields()">Clear Filter</button>
+        </div>
+        <div class="table">
+            <table id="studentTable">
+                <tr>
+                    <th onclick="firstNameClickHandler()">First Name</th>
+                    <th onclick="lastNameClickHandler()">Last Name</th>
+                    <th onclick="gradeClickHandler()">Grade</th>
+                    <th>Hobbies</th>
+                    <th>Emojis</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

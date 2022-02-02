@@ -10,7 +10,7 @@ th {
 }
 
 tr:nth-child(odd) {
-    background: khaki;
+    background: rgb(248, 238, 147);
 }
 
 tr:nth-child(even) {
